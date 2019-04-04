@@ -684,10 +684,10 @@ func resourceOraclePAASJavaServiceInstance() *schema.Resource {
 							}, false),
 						},
 						"subnets": {
-							Type:     schema.TypeSet,
+							Type:     schema.TypeList,
 							Optional: true,
 							ForceNew: true,
-							MinItems: 2,
+							MinItems: 1,
 							MaxItems: 2,
 							Elem:     &schema.Schema{Type: schema.TypeString},
 						},
